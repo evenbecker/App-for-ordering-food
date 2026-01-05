@@ -1,0 +1,22 @@
+<app-nav-bar></app-nav-bar>
+<p class="text-start fs-6 fw-bolder text-primary">Customer Name: {{ CurrentUser.username }}</p>
+<p class="text-start fs-6 fw-bolder text-primary">Delivery Address: {{ CurrentUser.useraddress }}</p>
+<p class="text-start fs-6 fw-bolder text-primary">Phone: {{ CurrentUser.Phone }}</p>
+<p class="text-end fs-6 fw-bolder text-dark">Total Amount: {{ getTotal() }}</p>
+<button class="m-1 btn btn-light btn-outline-dark" (click)="proceedBill()" Button>Buy</button>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Bill Number</th>
+            <th>LoginId</th>
+            <th>Billing Amount</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of BillList">
+            <td>{{ item.OrderNo }}</td>
+            <td>{{ CurrentUser.Loginid }}</td>
+             <td>{{ item.BillingAmount }}</td>
+        </tr>
+    </tbody>
+</table>

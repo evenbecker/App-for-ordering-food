@@ -1,0 +1,40 @@
+<app-nav-bar></app-nav-bar>
+<button type="button" class="btn btn-dark float-end m-2" (click)="generateBill()">
+    Generate Bill
+</button>
+<p class="text-left fs-3 fw-bolder text-primary">Total Cost : {{ getTotal() }}</p>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>CartId</th>
+             <th>LoginId</th>
+            <th>FoodCode</th>
+            <th>FoodName</th>
+            <th>Price</th>
+            <th>Quantity</th>
+
+
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of CartList">
+            <td>{{ item.CartId }}</td>
+             <td>{{ item.LoginId }}</td>
+            <td>{{ item.FoodCode }}</td>
+            <td>{{ item.FoodName }}</td>
+            <td>{{ item.Price*item.Quantity}}</td>
+
+            <td><button class="inc button" type="number" (click)="IncQty(item)">+</button> {{ item.Quantity }} <button
+
+                class="dec button" (click)="DecQty(item)">-</button></td>
+            <td>
+                <button type="button" class="btn btn-dark mr-1" (click)="removeFromCart(item)">
+                    Remove
+                </button>
+            </td>
+
+        </tr>
+    </tbody>
+</table>
+

@@ -1,0 +1,39 @@
+<!-- <app-nav-bar></app-nav-bar>
+<div class="columns" *ngFor="let item of FoodList">
+    <ul class="price">
+      <li class="header">FoodCode</li>
+      <li>{{ item.FoodName }}</li>
+      <li>{{ item.Description }}</li>
+      <li class="grey"><button type="button" class="btn btn-dark" (click)="addToCart(item)">Add To Cart</button></li>
+    </ul>
+</div> -->
+
+<app-nav-bar></app-nav-bar>
+<table class="table table-striped">
+  <thead>
+      <tr>
+          <th>FoodCode</th>
+          <th>FoodName</th>
+          <th>Description</th>
+          <th>Price</th>
+
+
+
+      </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let item of FoodList">
+          <td>{{ item.FoodCode }}</td>
+          <td>{{ item.FoodName  }}</td>
+          <td>{{ item.Description}}</td>
+          <td>{{ item.Price}}</td>
+
+
+          <td>
+              <button type="button" class="btn btn-dark mr-1" (click)="addToCart(item)">
+                  Add To Cart
+              </button>
+          </td>
+      </tr>
+  </tbody>
+</table>

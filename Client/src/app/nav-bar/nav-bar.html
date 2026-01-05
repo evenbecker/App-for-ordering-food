@@ -1,0 +1,52 @@
+<div>
+  <nav class="navbar navbar-expand-sm bg-dark navbar-light">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <p class="text-start fs-3 fw-bolder text-light">
+          Welcome {{ CurrentUser.username }}!
+        </p>
+      </li>
+      <li class="nav-item">
+        <button
+          routerLink="FoodMenu"
+          class="m-1 btn btn-light btn-outline-dark"
+          (click)="navigFood()"
+          Button
+        >
+          Food Menu
+        </button>
+      </li>
+      <li class="nav-item">
+        <button
+          routerLink="Cart"
+          class="m-1 btn btn-light btn-outline-dark"
+          (click)="navigCart()"
+          Button
+        >
+          Cart
+        </button>
+      </li>
+      <li class="nav-item">
+        <button
+          routerLink="Cart"
+          class="m-1 btn btn-light btn-outline-dark"
+          (click)="navigBill()"
+          Button
+        >
+          Bill
+        </button>
+      </li>
+      <li class="nav-item float-end">
+        <button
+          class="m-1 btn btn-light btn-outline-dark"
+          routerLink="Login"
+          (click)="onLogout()"
+          Button
+        >
+          Logout
+        </button>
+      </li>
+    </ul>
+  </nav>
+</div>
+<br />
