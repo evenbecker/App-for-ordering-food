@@ -17,7 +17,7 @@ export class Bill implements OnInit {
   constructor(
     private service: Shared,
     private token: TokenService,
-    private router: Router
+    private router: Router,
   ) {}
 
   BillList: any = [];
@@ -31,16 +31,11 @@ export class Bill implements OnInit {
   }
 
   getTotal() {
-    return this.BillList.reduce(
-      (sum: number, current: any) => sum + current.BillingAmount,
-      0
-    );
+    return this.BillList.reduce((sum: number, current: any) => sum + current.BillingAmount, 0);
   }
 
   refreshBillList() {
-    this.service
-      .getBillingDetail1(this.CurrentUserId)
-      .subscribe((data) => (this.BillList = data));
+    this.service.getBillingDetail1(this.CurrentUserId).subscribe((data) => (this.BillList = data));
   }
   removeFromOrderWC(item1: any) {
     this.OrderNo1 = item1.OrderNo;
@@ -64,10 +59,8 @@ export class Bill implements OnInit {
         Quantity: order.Quantity,
 
         Price: this.PartTotal,
-
-
       };
-      alert("Your purchase is successful");
+      alert('Your purchase is successful');
       this.removeFromOrderWC(order);
     });
 

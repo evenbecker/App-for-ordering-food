@@ -1,0 +1,10 @@
+.my-pic {
+  width: auto;
+  height: 200px;
+  margin: 20px;
+  margin-left: 100px;
+}
+.my-color {
+  color: rgb(108, 34, 10);
+  /*rgb(88, 18, 0);*/
+}
