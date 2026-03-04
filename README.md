@@ -1,6 +1,7 @@
 # App for ordering food
 
 ![an app screenshot](./doc/Screenshot-food.JPG)
+![food menu screenshot](./doc/screenshot-food-menu.png)
 
 ## Tech Stack
 
