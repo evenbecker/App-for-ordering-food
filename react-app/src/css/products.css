@@ -1,0 +1,27 @@
+.item {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+
+.item div {
+	display: flex;
+	margin: 0 50px;
+	text-align: center;
+	align-items: center;
+}
+
+.item img {
+	width: 100px;
+	height: 100px;
+	object-fit: cover;
+}
+
+.item select{
+	width: 50px;
+}
+
+.item .description {
+	width: 300px;
+}
