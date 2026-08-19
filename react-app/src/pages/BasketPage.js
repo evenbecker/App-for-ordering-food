@@ -40,9 +40,9 @@ export default function BasketPage() {
                   <th>Image</th>
                   <th>Stock Number</th>
                   <th>Description</th>
-                  <th>Price (£)</th>
+                  <th>Price (€)</th>
                   <th>Quantity</th>
-                  <th>Total (£)</th>
+                  <th>Total (€)</th>
                 </tr>
               </thead>
               <tbody>
@@ -64,7 +64,7 @@ export default function BasketPage() {
                 ))}
               </tbody>
             </table>
-            <h5>Total Price: £{order.totalPrice.toFixed(2)}</h5>
+            <h5>Total Price: {order.totalPrice.toFixed(2)}€</h5>
           </div>
         ))
       )}

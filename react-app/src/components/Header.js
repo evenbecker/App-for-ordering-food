@@ -9,7 +9,7 @@ export default function Header({ isLoggedIn, setIsLoggedIn, setUser }) {
     };
 
     return (
-        <nav className="navbar bg-primary mb-3" data-bs-theme="dark">
+        <nav className="navbar mb-3">
             <div className="container-fluid">
                 <span className="navbar-brand mb-0 h1">Food Shop</span>
                 <div className="nav nav-underline me-auto">
