@@ -6,7 +6,11 @@ export default function Layout({ isLoggedIn, setIsLoggedIn, setUser }) {
   return (
     <div className="wrapper">
       <Header isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} setUser={setUser} />
-      <Outlet />
+      <div className="background-layer" >
+        <div className="iceberg">
+          <Outlet />
+        </div>
+      </div>
     </div>
   );
 }

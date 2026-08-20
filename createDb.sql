@@ -35,13 +35,13 @@ create table ESTOCK(
 
 INSERT INTO ESTOCK (stockno, description, price, qtyinstock)
 VALUES
-('EG334', 'Truffes', 600.00, 20),
-('HG602', 'Noix', 200.00, 50),
-('SH990', 'Broccoli', 35.00, 100),
-('SP120', 'Raisin', 500.00, 3),
-('WS980', 'Figues', 350.00, 40),
-('GD500', 'Melon', 250.00, 40),
-('GD550', 'Echalottes', 300.00, 40);
+('FS334', 'Truffes', 10.40, 20),
+('FS602', 'Noix', 6.70, 50),
+('LF990', 'Broccoli', 5.20, 100),
+('LF120', 'Raisin', 4.00, 70),
+('LF980', 'Figues', 8.30, 40),
+('MF500', 'Melon', 2.90, 40),
+('EF550', 'Echalottes', 1.00, 90);
 
 create table EORDER(
 	orderno INT(8) AUTO_INCREMENT NOT NULL,

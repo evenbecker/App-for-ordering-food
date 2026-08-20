@@ -26,16 +26,16 @@ export default function BasketPage() {
   if (error) return <div className="alert alert-danger">{error}</div>;
 
   return (
-    <div className="container mt-4">
+    <div className="container mt-1">
       <h2>Your Orders</h2>
       {orders.length === 0 ? (
         <p>You have no orders.</p>
       ) : (
         orders.map((order) => (
-          <div className="border p-3 mb-5" key={order.orderno} id={`order-${order.orderno}`}>
+          <div className="border p-3 mb-1" key={order.orderno} id={`order-${order.orderno}`}>
             <h5>Order Number: {order.orderno}</h5>
             <table className="table mt-3">
-              <thead className="table-dark">
+              <thead className="table-secondary">
                 <tr>
                   <th>Image</th>
                   <th>Stock Number</th>
@@ -52,19 +52,21 @@ export default function BasketPage() {
                       <img
                         src={`/img/${item.stockno}.jpeg`}
                         alt={item.description}
-                        style={{ width: "100px", objectFit: "cover" }}
+                        style={{ height: "60px", objectFit: "cover" }}
                       />
                     </td>
                     <td>{item.stockno}</td>
                     <td>{item.description}</td>
-                    <td>{item.price}</td>
+                    <td>{item.price.toFixed(2)}</td>
                     <td>{item.quantity}</td>
                     <td>{(item.price * item.quantity).toFixed(2)}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
-            <h5>Total Price: {order.totalPrice.toFixed(2)}€</h5>
+            <div className="mx-5">
+              <h5>Total Price: {order.totalPrice.toFixed(2)}€</h5>
+            </div>
           </div>
         ))
       )}
