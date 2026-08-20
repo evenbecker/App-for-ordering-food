@@ -1,5 +1,7 @@
 # App for ordering food
 
+![an app screenshot](./doc/screenshot-food.png)
+
 ## Tech Stack
 
 - .Net Core 9 Web Api.
